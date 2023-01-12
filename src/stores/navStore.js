@@ -5,7 +5,7 @@ export const useNavStore = defineStore('Nav Store', {
         navLinks: [
             {
                 text: 'Каталог авто',
-                url: '#'
+                url: '#catalog'
             },
             {
                 text: 'Удобства',
@@ -17,7 +17,7 @@ export const useNavStore = defineStore('Nav Store', {
             },
             {
                 text: 'О компании',
-                url: '#'
+                url: '#about us'
             },
             {
                 text: 'Риски и гарантии',
@@ -25,11 +25,11 @@ export const useNavStore = defineStore('Nav Store', {
             },
             {
                 text: 'Отзывы',
-                url: '#'
+                url: '#rates'
             },
             {
                 text: 'Контакты',
-                url: '#'
+                url: '#contact'
             },
         ],
         workInfo: {

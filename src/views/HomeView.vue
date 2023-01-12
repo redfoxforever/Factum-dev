@@ -8,7 +8,10 @@
 
     <WhyProfitable/>
 
+    <Stages/>
+
     <Team/>
+
   </main>
   
 </template>
@@ -19,6 +22,7 @@ import Header from '@/components/Header.vue'
 import Catalog from '@/components/Catalog.vue'
 import WhyProfitable from '@/components/WhyProfitable.vue'
 import Team from '@/components/Team.vue'
+import Stages from '@/components/Stages.vue'
 
 export default {
   name: 'Home',
@@ -27,7 +31,8 @@ export default {
     Header,
     Catalog,
     WhyProfitable,
-    Team
+    Team,
+    Stages
   }
 }
 

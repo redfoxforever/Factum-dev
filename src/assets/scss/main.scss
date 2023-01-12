@@ -24,6 +24,10 @@ $main-font: 'Cannonade';
     background: linear-gradient(330.72deg, #F2704F -0.73%, #C23EC2 31.24%, #0689F2 91.18%);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +66,7 @@ button {
 
 body {
     background: #FAFAFA;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -92,10 +97,12 @@ button {
     border-radius: 5px;
     color: var(--white-color);
     transition: .4s;
+    display: grid;
+    place-items: center;
 
     &:hover {
         background: var(--blue-gradient);
-        box-shadow: 0px 18px 28px -9px var(--blue-color);
+        box-shadow: 0 0;
     }
 }
 

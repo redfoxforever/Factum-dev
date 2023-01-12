@@ -65,6 +65,10 @@ export default {
     padding: 20px 0;
     background: #FFFFFF;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2022;
 
     .row {
         justify-content: space-between;

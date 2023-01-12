@@ -1,6 +1,6 @@
 <template>
 
-  <section class="catalog__section">
+  <section class="catalog__section" id="catalog">
     <div class="container">
         <div class="row">
 

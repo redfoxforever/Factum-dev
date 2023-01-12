@@ -1,7 +1,7 @@
 <template>
   <swiper :modules="modules" :slides-per-view="4" :space-between="50"
-   :pagination="{ clickable: true }" class="catalog__swiper" :speed="900" 
-   :autoplay="{ delay: 2500, disableOnInteraction: false}">
+   :pagination="{ clickable: true }" class="catalog__swiper" :speed="900" :grabCursor="true" 
+   :autoplay="{ delay: 1800, disableOnInteraction: false}">
     <swiper-slide v-for="(slide, idx) in sliderData" :key="idx" class="catalog__swiper-slide">
         <img :src="slide.img" alt="" class="car-img">
         <p class="car-name">{{ slide.name }}</p>

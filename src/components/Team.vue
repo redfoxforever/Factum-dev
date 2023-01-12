@@ -1,5 +1,5 @@
 <template>
-  <section class="team__section">
+  <section class="team__section" id="about us">
     <div class="container">
         <div class="row">
 
@@ -51,7 +51,6 @@ export default {
 
 .team__section {
     width: 100%;
-    margin-bottom: 100px;
 
     .row {
         flex-direction: column;

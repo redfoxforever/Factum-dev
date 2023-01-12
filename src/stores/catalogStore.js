@@ -147,43 +147,43 @@ export const useCatalogStore = defineStore('Catalog Store', {
                 active: false,
                 data: [
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-1.png'
                     },
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-2.png'
                     },
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-3.png'
                     },
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-4.png'
                     },
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-5.png'
                     },
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-6.png'
                     },
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-7.png'
                     },
                     {
-                        name: 'mercedes gla 250',
-                        info: 'mercedes gla 2021 2.0L inline-4 turbo',
+                        name: 'no car name',
+                        info: 'no information about this car',
                         img: '/src/assets/images/main/catalog/hybrids/hybrid-car-8.png'
                     },
                 ]               
