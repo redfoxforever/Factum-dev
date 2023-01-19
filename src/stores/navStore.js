@@ -13,7 +13,7 @@ export const useNavStore = defineStore('Nav Store', {
             },
             {
                 text: 'Цены',
-                url: '#'
+                url: '#prices'
             },
             {
                 text: 'О компании',
@@ -21,7 +21,7 @@ export const useNavStore = defineStore('Nav Store', {
             },
             {
                 text: 'Риски и гарантии',
-                url: '#'
+                url: '#risks'
             },
             {
                 text: 'Отзывы',

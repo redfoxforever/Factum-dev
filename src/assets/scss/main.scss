@@ -5,11 +5,13 @@ $main-font: 'Cannonade';
 :root {
     --main-font: 'Cannonade';
     --dark-color: #333333;
-    --text-color: #818181;
+    --text-color: #878787;
     --red-color: #E50D23;
     --blue-color: #1E91F6;
     --white-color: #fff;
     --gray-color: #C9C9C9;
+    --green-color: #6BC581;
+    --orange-color: #FB834E;
     --red-gradient: linear-gradient(336.46deg, rgba(229, 13, 35, 0.63) -2.37%, #E50D23 89.69%);
     --blue-gradient: linear-gradient(89.8deg, #0871FC 15.18%, #1E91F6 88.19%);
     --gray-gradient: linear-gradient(323.79deg, #D6D6D6 6.99%, #F4F4F4 95.21%);
@@ -92,16 +94,17 @@ button {
 }
 
 .red-btn {
-    background: linear-gradient(336.46deg, rgba(229, 13, 35, 0.63) -2.37%, #E50D23 89.69%);
+    background: var(--red-color);
     box-shadow: 0px 18px 28px -9px rgba(229, 13, 35, 0.61);
     border-radius: 5px;
     color: var(--white-color);
     transition: .4s;
     display: grid;
     place-items: center;
+    font-weight: 700;
 
     &:hover {
-        background: var(--blue-gradient);
+        background: var(--blue-color);
         box-shadow: 0 0;
     }
 }
@@ -139,11 +142,14 @@ h1, h2 {
     border-radius: 10px;
 }
 
-.catalog__swiper {
-    .swiper-pagination {
-        position: static;
-        margin-top: 30px;
-        
+.catalog__swiper, 
+.video-rates__swiper, 
+.rates__swiper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+    .swiper-pagination {        
         .swiper-pagination-bullet {
             min-width: 8px;
             transition: .7s;
@@ -171,4 +177,50 @@ h1, h2 {
             box-shadow: 0px 10px 22px -7px rgba(30, 145, 246, 0.86);
         }
     }
+}
+
+.video-rates__swiper {
+    .swiper-pagination-bullet {
+        &.swiper-pagination-bullet-active {
+            background: var(--blue-color) !important;
+        }
+    }
+}
+
+.messengers__content {
+    &-link {
+        i {
+            font-size: 30px;
+            color: var(--white-color);
+        }
+    }
+
+    &-title {
+        .blue-spn {
+            color: var(--blue-color);
+        }
+
+        .orange-spn {
+            color: var(--orange-color);
+        }
+    }
+}
+
+.video-rates__swiper {
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #767676;
+    }
+}
+
+.contact__content-title {
+    span {
+        color: var(--blue-color);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

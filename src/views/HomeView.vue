@@ -10,9 +10,24 @@
 
     <Stages/>
 
+    <Tariffs/>
+
+    <Messengers/>
+
+    <AboutUs/>
+
     <Team/>
 
+    <Risks/>
+
+    <VideoRates/>
+
+    <Rates/>
+
+    <Contact/>
   </main>
+
+  <Footer/>
   
 </template>
 
@@ -23,6 +38,14 @@ import Catalog from '@/components/Catalog.vue'
 import WhyProfitable from '@/components/WhyProfitable.vue'
 import Team from '@/components/Team.vue'
 import Stages from '@/components/Stages.vue'
+import AboutUs from '@/components/AboutUs.vue'
+import Risks from '@/components/Risks.vue'
+import Messengers from '@/components/Messengers.vue'
+import Tariffs from '@/components/Tariffs.vue'
+import VideoRates from '@/components/VideoRates.vue'
+import Rates from '@/components/Rates.vue'
+import Contact from '@/components/Contact.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Home',
@@ -32,7 +55,15 @@ export default {
     Catalog,
     WhyProfitable,
     Team,
-    Stages
+    Stages,
+    AboutUs,
+    Risks,
+    Messengers,
+    Tariffs,
+    VideoRates,
+    Rates,
+    Contact,
+    Footer
   }
 }
 

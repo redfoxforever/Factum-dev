@@ -108,7 +108,7 @@ export default {
 
     .catalog__sliders {
         width: 100%;
-        max-height: 542px;
+        max-height: 569px;
         overflow-y: hidden;
     }
 }

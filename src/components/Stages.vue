@@ -112,12 +112,14 @@ export default {
     }
 
     .stages__bg-img {
+        max-width: 2400px;
         width: 100%;
         position: absolute;
         max-height: 1270px;
         height: 100%;
         top: 0;
-        left: 0;
+        left: 50%;
+        translate: -50% 0;
         transform: scale(1.3);
         z-index: -3;
     }

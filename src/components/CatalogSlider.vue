@@ -7,6 +7,10 @@
         <p class="car-name">{{ slide.name }}</p>
         <p class="car-info">{{ slide.info }}</p>
 
+        <p class="money-save-info">
+            <i class="fas fa-check-circle"></i> Вы экономите ${{ slide.saveNum }}
+        </p>
+
         <a href="https://www.instagram.com/redfox_4ever/" target="_blank" class="send-btn">
             Отправить запрос
         </a>
@@ -85,6 +89,19 @@ export default {
             font-size: 18px;
             text-transform: capitalize;
             font-weight: 700;
+        }
+
+        .money-save-info {
+            font-size: 14px;
+            color: var(--green-color);
+
+            i {
+                color: var(--green-color);
+            }
+
+            &::first-letter {
+                text-transform: uppercase;
+            }
         }
 
         .car-info {
