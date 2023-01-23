@@ -197,17 +197,18 @@ export default {
             transition: .4s;
             position: absolute;
             top: 30%;
+            z-index: 3;
 
             i {
                 color: var(--red-color);
             }
 
             &.prev {
-                left: -5%;
+                left: 0;
             }
 
             &.next {
-                right: -5%;
+                right: 0;
             }
 
             &.swiper-button-disabled {

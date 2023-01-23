@@ -1,7 +1,7 @@
 <template>
   <Nav/>
 
-  <Header/>
+  <!-- <Header/>
 
   <main class="main">
     <Catalog/>
@@ -27,7 +27,7 @@
     <Contact/>
   </main>
 
-  <Footer/>
+  <Footer/> -->
   
 </template>
 

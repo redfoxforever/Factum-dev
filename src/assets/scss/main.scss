@@ -145,11 +145,12 @@ h1, h2 {
 .catalog__swiper, 
 .video-rates__swiper, 
 .rates__swiper {
+    max-width: 1275px;
     display: flex;
     flex-direction: column;
     row-gap: 50px;
 
-    .swiper-pagination {        
+    .swiper-pagination {
         .swiper-pagination-bullet {
             min-width: 8px;
             transition: .7s;
@@ -223,4 +224,17 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.contact__list-item {
+    i {
+        color: var(--red-color);
+        transition: .4s;
+    }
+
+    &:hover {
+        i {
+            color: var(--white-color);
+        }
+    }
 }

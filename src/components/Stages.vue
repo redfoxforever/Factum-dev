@@ -48,8 +48,6 @@
             </a>
         </div>
     </div>
-
-    <img src="/src/assets/images/main/stages/bg-img.svg" alt="" class="stages__bg-img">
   </section>
 </template>
 
@@ -85,6 +83,7 @@ export default {
     width: 100%;
     padding: 100px 0;
     position: relative;
+    background: rgba($color: #EBEBEB, $alpha: .7);
 
     .row {
         flex-direction: column;
@@ -108,78 +107,6 @@ export default {
 
         &::first-letter {
             text-transform: uppercase;
-        }
-    }
-
-    .stages__bg-img {
-        max-width: 2400px;
-        width: 100%;
-        position: absolute;
-        max-height: 1270px;
-        height: 100%;
-        top: 0;
-        left: 50%;
-        translate: -50% 0;
-        transform: scale(1.3);
-        z-index: -3;
-    }
-
-    .stages__cards-list {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-
-        .stages__card {
-            max-width: 400px;
-            width: 100%;
-            display: flex;
-            column-gap: 20px;
-            justify-content: space-between;
-
-            &-icon-box {
-                min-width: 55px;
-                max-width: 55px;
-                width: 100%;
-                height: 55px;
-                display: grid;
-                place-items: center;
-                background: #E0E0E0;
-                border-radius: 50%;
-                user-select: none;
-
-                img {
-                    max-width: 30px;
-                    width: 100%;
-                }
-            }
-            
-            &-desc {
-                display: flex;
-                flex-direction: column;
-                row-gap: 20px;
-                align-items: flex-start;
-            }
-
-            &-title {
-                font-size: 15px;
-                color: var(--text-color);
-                letter-spacing: 0.21em;
-                text-transform: uppercase;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-            }
-
-            &-text {
-                font-size: 15px;
-                display: -webkit-box;
-                -webkit-line-clamp: 6;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-            }
         }
     }
 
@@ -339,7 +266,6 @@ export default {
                         position: absolute;
                         top: -25%;
                         left: -5%;
-                        z-index: -1;
                     }
 
                     &-title {
@@ -347,8 +273,68 @@ export default {
                         font-size: 22px;
                         font-weight: 700;
                         margin-left: auto;
+                        z-index: 3;
                     }
                 }
+            }
+        }
+    }
+
+    .stages__cards-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        .stages__card {
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            column-gap: 20px;
+            justify-content: space-between;
+
+            &-icon-box {
+                min-width: 55px;
+                max-width: 55px;
+                width: 100%;
+                height: 55px;
+                display: grid;
+                place-items: center;
+                background: #E0E0E0;
+                border-radius: 50%;
+                user-select: none;
+
+                img {
+                    max-width: 30px;
+                    width: 100%;
+                }
+            }
+            
+            &-desc {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                align-items: flex-start;
+            }
+
+            &-title {
+                font-size: 15px;
+                color: var(--text-color);
+                letter-spacing: 0.21em;
+                text-transform: uppercase;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            &-text {
+                font-size: 15px;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
         }
     }

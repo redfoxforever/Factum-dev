@@ -6,7 +6,8 @@
             <h2 class="video-rates__title">{{ store.title }}</h2>
 
             <div class="video__slider">
-                <swiper class="video-rates__swiper" :modules="modules" :slides-per-view="3" :space-between="40" :speed="900" :pagination="{clickable: true}" :autoplay="{ delay: 1800, disableOnInteraction: false}"
+                <swiper class="video-rates__swiper" :modules="modules" :slides-per-view="3" :space-between="40" :speed="900" :pagination="{clickable: true}"
+                :autoplay="{ delay: 1800, disableOnInteraction: false}" 
                 :navigation="{ nextEl: '.video-slide-next', prevEl: '.video-slide-prev'}">
                     <swiper-slide class="video-rates__swiper-slide" v-for="(slide, idx) in store.sliderData" :key="idx">
                         <div class="video-box">
@@ -202,17 +203,18 @@ export default {
             transition: .4s;
             position: absolute;
             top: 30%;
+            z-index: 3;
 
             i {
                 color: var(--blue-color);
             }
 
             &.video-slide-prev {
-                left: -5%;
+                left: 0;
             }
 
             &.video-slide-next {
-                right: -5%;
+                right: 0;
             }
 
             &.swiper-button-disabled {

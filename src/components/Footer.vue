@@ -4,13 +4,13 @@
         <div class="container">
             <div class="row">
 
-                <div class="footer__logo">
+                <router-link to="/" class="footer__logo">
                     <img src="@/assets/images/logo.png" alt="" class="footer-logo-img">
 
                     <span class="privacy-text">
                         Factum.ua @ 2010-{{ new Date().getFullYear() }} <br> Все права защищены
                     </span>
-                </div>
+                </router-link>
 
                 <div class="footer__info nav-list">
                     <p class="info-title">{{ store.navLinks.title }}</p>
@@ -37,6 +37,16 @@
                 <div class="footer__info legal-info">
                     <p class="info-title legal-info-title">{{ store.legalInfo.title }}</p>
                     <p class="legal-info-text" v-html="store.legalInfo.text"></p>
+                </div>
+
+                <div class="footer__info contact-info">
+                    <p class="info-title contact-info-title">{{ store.contactInfo.title }}</p>
+
+                    <div class="contact__list">
+                        <a :href="link.url" v-for="(link, idx) in store.contactInfo.webLinks" :key="idx" target="_blank" class="contact__list-item" v-html="link.icon"></a>
+                    </div>
+
+                    <button class="red-btn review-btn">{{ store.contactInfo.btn }}</button>
                 </div>
 
             </div>
@@ -87,7 +97,6 @@ export default {
 
         .privacy-text {
             font-size: 13px;
-            font-weight: 700;
             color: var(--gray-color);
         }
 
@@ -152,6 +161,48 @@ export default {
                 &:hover {
                     color: var(--red-color);
                 }
+            }
+        }
+
+        &.contact-info {
+            align-items: flex-end;
+            text-align: end;
+
+            .contact-info-title {
+                font-size: 14px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+
+            .contact__list {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 15px;
+
+                &-item {
+                    width: 60px;
+                    min-height: 60px;
+                    display: grid;
+                    place-items: center;
+                    border-radius: 50%;
+                    font-size: 25px;
+                    background: #F5F5F5;
+                    transition: .4s;
+
+                    &:hover {
+                        background: var(--blue-color);
+                    }
+                }
+            }
+
+            .review-btn {
+                width: 100%;
+                padding: 15px 0;
+                text-transform: uppercase;
             }
         }
     }

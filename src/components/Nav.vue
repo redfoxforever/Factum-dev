@@ -7,7 +7,8 @@
                 <img src="" alt="" class="logo-img">
             </router-link>
 
-            <span class="line-span"></span>
+            <span class="line-span" v-if="windowSize > 1315"></span>
+
 
             <div class="nav__collapse">
                 <ul class="nav__list">
@@ -18,7 +19,7 @@
                     </li>
                 </ul>
 
-                <span class="line-span"></span>
+                <span class="line-span" v-if="windowSize > 1315"></span>
 
                 <div class="work__info">
                     <p class="work__info-place">{{ store.workInfo.place }}</p>
@@ -27,7 +28,7 @@
                 </div>
             </div>
 
-            <span class="line-span"></span>
+            <span class="line-span" v-if="windowSize > 1315"></span>
 
             <div class="contact__info">
                 <a :href="`tel: ${store.contactInfo.tel.url}`" class="contact__info-num">{{ store.contactInfo.tel.text }}</a>
@@ -48,11 +49,16 @@ export default {
     name: 'Nav',
     data() {
         return {
-            store: useNavStore()
+            store: useNavStore(),
+            windowSize: window.innerWidth
         }
     },
     mounted() {
         document.querySelector('.logo-img').src = logo;
+
+        window.addEventListener('resize', () => {
+            this.windowSize = window.innerWidth
+        })
     }
 }
 
@@ -152,7 +158,7 @@ export default {
         user-select: none;
 
         &-num {
-            font-size: 18px;
+            font-size: calc(16px + 2 * (100vw / 1920));
             font-weight: 700;
         }
 
@@ -162,6 +168,59 @@ export default {
             font-weight: 700;
             font-size: 13px;
             border-bottom: 2px dashed var(--red-color);
+        }
+    }
+}
+
+
+@media (max-width: 1325px) {
+    .row {
+        gap: 10px !important;
+    }
+
+    .nav__collapse {
+        column-gap: 15px !important;
+
+        .nav__list {
+            gap: 15px !important;
+        }
+    }
+
+}
+
+@media (min-width: 1920px) {
+    .contact__info {
+        &-num {
+            font-size: 18px !important; 
+        }
+    }
+}
+
+@media (max-width: 1315px) {
+    .nav__collapse {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center;
+        height: 100vh;
+        background: #fff;
+        padding: 30px;
+        box-shadow: -8px 0 34px rgb(0 0 0 / 3%);
+
+        .nav__list {
+            flex-direction: column;
+            align-items: flex-end !important;
+            gap: 20px !important;
+            overflow-y: auto;
+            text-align: end !important;
+        }
+
+        .work__info {
+            text-align: end !important;
+            align-items: flex-end !important;
         }
     }
 }

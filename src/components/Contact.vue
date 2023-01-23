@@ -6,10 +6,14 @@
             <div class="container">
                 <div class="row">
 
+                    <img src="@/assets/images/main/contact/contact-key-img.png" alt="" class="contact__header-img">
+
                     <div class="contact__content">
                         <h2 class="contact__content-title" 
                         v-html="store.header.content.title"></h2>
                         <p class="contact__content-text">{{ store.header.content.text }}</p>
+
+                        <img src="@/assets/images/main/contact/contact-right-icon.svg" alt="" class="contact__content-icon">
                     </div>
 
                     <div class="contact__header-modal">
@@ -96,6 +100,8 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    padding-top: 70px;
 
     .contact__header {
         width: 100%;
@@ -107,6 +113,13 @@ export default {
             align-items: center;
         }
 
+        &-img {
+            max-width: 250px;
+            width: 100%;
+            pointer-events: none;
+            user-select: none;
+        }
+
         .contact__content {
             max-width: 400px;
             width: 100%;
@@ -114,6 +127,7 @@ export default {
             flex-direction: column;
             align-items: flex-start;
             row-gap: 15px;
+            position: relative;
 
             &-title {
                 &::first-letter {
@@ -128,6 +142,16 @@ export default {
                 &::first-letter {
                     text-transform: uppercase;
                 }   
+            }
+
+            &-icon {
+                max-width: 130px;
+                width: 100%;
+                pointer-events: none;
+                user-select: none;
+                position: absolute;
+                top: -10%;
+                right: -10%;
             }
         }
 
@@ -188,12 +212,11 @@ export default {
                             font-weight: 500;
                             color: #cacaca;
                         }
-                    }
 
-                    :last-child {
-                        border-bottom: none;
+                        &:last-of-type {
+                            border-bottom: 0;
+                        }
                     }
-
                 }
 
                 .contact-btn {

@@ -28,6 +28,24 @@ export const useFooterStore = defineStore('Footer Store', {
                     url: 'tel: +998998173066'
                 }
             ]
+        },
+        contactInfo: {
+            title: 'Присоединяйтесь к нам в соцсетях, чтобы не упустить скидки!',
+            btn: 'Оставить отзыв',
+            webLinks: [
+                {
+                    icon: '<i class="fab fa-telegram-plane"></i>',
+                    url: 'https://t.me/redfox4ever'
+                },
+                {
+                    icon: '<i class="fab fa-instagram"></i>',
+                    url: 'https://www.instagram.com/redfox_4ever/'
+                },
+                {
+                    icon: '<i class="fab fa-linkedin-in"></i>',
+                    url: 'https://www.linkedin.com/in/avazbek-saidaliyev-604692239/'
+                }
+            ]
         }
     })
 })
